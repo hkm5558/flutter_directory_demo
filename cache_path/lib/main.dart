@@ -63,6 +63,10 @@ class _MyHomePageState extends State<MyHomePage> {
   Future<void> _getDirectory() async {
     Directory tempDir = await getTemporaryDirectory();
     print("tempDir == $tempDir");
+    Directory documentDir = await getApplicationDocumentsDirectory();
+    print("documentDir == $documentDir");
+    Directory supportDir = await getApplicationSupportDirectory();
+    print("supportDir == $supportDir");
   }
 
   Future<void> _incrementCounter() async {
